@@ -72,12 +72,16 @@ class Screen {
     process.stdin.on('keypress', function (ch, key) {
 
       if (!key) {
+        Screen.setMessage('');
+        Screen.render();
         console.log("Warning: Unknown keypress");
       } else if (!Screen.commands.hasOwnProperty(key.name)) {
+        Screen.setMessage('');
         Screen.render();
         console.log(`${key.name} not supported.`);
         Screen.printCommands();
       } else {
+        Screen.setMessage('');
         Screen.render();
         Screen.commands[key.name].execute();
       }
