@@ -118,12 +118,12 @@ describe ('ComputerPlayer', function () {
   });
 
 
-  it('can play 100000 games without losing', function () {
+  it('can play 10000 games without losing', function () {
 
     let losses = 0;
     let wins = 0;
     let ties = 0;
-    for (let i = 0 ; i < 100000 ; i++) {
+    for (let i = 0 ; i < 10000 ; i++) {
 
       grid = [[' ',' ',' '],
               [' ',' ',' '],
